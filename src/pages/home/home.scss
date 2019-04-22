@@ -1,3 +1,74 @@
-page-home {
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.focus{
+    height: 150px;
+    width: 100%;
+    ion-slide{
+
+        height: 150px;
+        width: 100%;
+
+        img{
+
+            height: 150px;            
+            width: 100%;
+        }
+    }
+}
+
+
+.home_title{
+    font-size: 14px;
+    padding:5px 0px 5px 5px;
+
 
 }
+
+.home_title:before{
+
+    
+    display:inline-block;
+    border-left: 3px solid #f53d3d;
+    height: 14px;
+    width: 1px;
+    content: "";
+
+
+}
+
+//推荐商品
+.slide_product{
+       //滚动
+
+    ion-scroll{
+    
+        width:100%;
+        height: 120px;
+    
+    }
+    ul{
+        list-style: none; 
+
+        padding: 0px 5px;
+
+        li{
+            width: 80px;
+            height: 120px;
+            float: left;
+            margin-right: 10px;
+            p{
+                padding:4px;
+                margin:0px;
+            }
+    
+        }
+    }
+ 
+      
+  
+}
+
+

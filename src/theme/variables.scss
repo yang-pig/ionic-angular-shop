@@ -86,3 +86,11 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+.mytabs .tab-button[aria-selected=true] .tab-button-icon{
+  color: #f53d3d !important;
+}
+.mytabs  .tab-button:hover:not(.disable-hover), .mytabs .tab-button[aria-selected=true] {
+  color: #f53d3d !important;
+}
