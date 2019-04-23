@@ -1,3 +1,19 @@
-page-contact {
+.cate_content{
+    width:100%;
+    height: 100%;  /*首先看高度100% 是否管用  如果没有作用我们要给元素设置绝对定位*/
+    display: flex;
 
+    .cate_left{
+        width: 100px;
+        height: 100%;
+        overflow-y: auto;
+
+
+    }
+    .cate_right{
+        height: 100%;
+        flex:1;
+        overflow-y: auto;
+        
+    }
 }

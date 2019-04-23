@@ -94,3 +94,11 @@ $colors: (
 .mytabs  .tab-button:hover:not(.disable-hover), .mytabs .tab-button[aria-selected=true] {
   color: #f53d3d !important;
 }
+
+.clearfix:after{
+
+  content: "";
+  display: block;
+  height:0px;
+  clear: both;
+}
