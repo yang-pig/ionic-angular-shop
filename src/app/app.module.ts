@@ -7,6 +7,13 @@ import { CartPage } from '../pages/cart/cart';
 import { CategoryPage } from '../pages/category/category';
 import { HomePage } from '../pages/home/home';
 import { UserPage } from '../pages/user/user';
+import { LoginPage } from '../pages/login/login';
+//注册
+import { RegisterPage } from '../pages/register/register';
+import { RegistersignPage } from '../pages/registersign/registersign';
+import { RegisterpasswordPage } from '../pages/registerpassword/registerpassword';
+
+
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,6 +26,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CategoryPage,
     HomePage,
     UserPage,
+    LoginPage,
+    RegisterPage,
+    RegistersignPage,
+    RegisterpasswordPage,
     TabsPage
   ],
   imports: [
@@ -32,6 +43,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CartPage,
     HomePage,
     UserPage,
+    LoginPage,
+    RegisterPage,
+    RegistersignPage,
+    RegisterpasswordPage,
     TabsPage
   ],
   providers: [

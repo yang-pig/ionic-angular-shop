@@ -1,0 +1,36 @@
+.sign_page{
+    display: flex;
+    padding:1rem;
+   
+    width: 100%;
+
+    input{
+        flex: 1;
+        border:1px solid #eee;       
+        height: 3.6rem;
+        text-indent: .5rem;
+
+    }
+    .timer{
+        width: 8rem;
+        height: 3.6rem;
+        line-height: 3.6rem;
+        margin-left: 1rem;
+
+        text-align: center;
+        background: #eee;
+        color:#666;
+        
+    }
+}
+
+.code_info{
+    
+    padding:.5rem 1rem;
+}
+
+.code_sign_p{
+
+    color: #999;
+    font-size: 1.2rem;
+}
