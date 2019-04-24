@@ -5,11 +5,59 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>user</ion-title>
+    <ion-title>用户</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
+
+<ion-content>
+
+  <div class="login">
+    <div class="userimg">
+      <img src="assets/imgs/user.png"  />
+    </div>
+
+    <div class="login_reg">
+        <button ion-button>登录</button>
+        <button ion-button >注册</button>
+    </div>
+
+  </div>
+
+
+  <ion-list inset class="user_list">
+
+        <ion-item-divider >
+        </ion-item-divider>
+        <ion-item>
+            <ion-icon name="ios-paper-outline" item-start></ion-icon>
+            <span>全部订单</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="ios-card-outline" item-start></ion-icon>
+            <span> 待付款</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="ios-subway-outline" item-start></ion-icon>
+            <span>待收货</span>
+        </ion-item>
+
+        <ion-item-divider >
+        </ion-item-divider>
+        
+        <ion-item>
+            <ion-icon name="ios-star-outline" item-start></ion-icon>
+            <span>我的收藏</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="ios-people-outline" item-start></ion-icon>
+            <span>在线客服</span>
+        </ion-item>
+
+
+  </ion-list>
 
 </ion-content>
