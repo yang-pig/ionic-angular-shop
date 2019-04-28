@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 //搜索页面
 import { SearchPage } from '../search/search';
 
+import { ConfigProvider } from '../../providers/config/config';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -16,8 +18,9 @@ export class HomePage {
 
   public recListWidth='';
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public config:ConfigProvider) {
 
+    console.log(config.apiUrl);
     for(let i=0;i<10;i++){
 
       this.recList.push({
