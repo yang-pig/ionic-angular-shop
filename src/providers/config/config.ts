@@ -15,7 +15,7 @@ export class ConfigProvider {
     console.log('Hello ConfigProvider Provider');
   }
   run() {
-
+    console.log("run");
   }
 
 }
