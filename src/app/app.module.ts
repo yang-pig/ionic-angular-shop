@@ -25,6 +25,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
+import { HttpServiceProvider } from '../providers/http-service/http-service';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { ConfigProvider } from '../providers/config/config';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ConfigProvider
+    ConfigProvider,
+    HttpServiceProvider
   ]
 })
 export class AppModule {}

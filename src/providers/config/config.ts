@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ConfigProvider {
 
-  public apiUrl = "http://www.baidu.com"
+  public apiUrl="http://jd.itying.com/";
   constructor() {
     console.log('Hello ConfigProvider Provider');
   }

@@ -6,17 +6,10 @@
 
 <ion-content>
 
-   <ion-slides pager class="focus" loop="true" autoplay="3000">    
-      <ion-slide>
-          <img src="assets/imgs/slide01.png" />
-      </ion-slide>    
-      <ion-slide>
-        <img src="assets/imgs/slide02.png" />
-      </ion-slide>
-    
-      <ion-slide>
-        <img src="assets/imgs/slide03.jpg" />
-      </ion-slide>
+   <ion-slides pager class="focus" loop="true" autoplay="3000" *ngIf="focusList.length >=1" >    
+    <ion-slide *ngFor="let item of focusList">
+      <img [src]="config.apiUrl+item.pic" />
+  </ion-slide>    
     
     </ion-slides>
 
