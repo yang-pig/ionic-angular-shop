@@ -1,0 +1,35 @@
+//列表
+
+.sub_header{
+    height: 4rem;
+    line-height: 4rem;
+    position: fixed;
+    top:4.3rem;
+    width: 100%;
+    border-bottom:1px solid #eee;
+    display: flex;
+    z-index: 2;
+    background: #fff;
+    div{
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.list_content {
+
+        .list-ios[inset]{
+
+            margin-top:4rem!important;
+            
+        }
+        .label-ios{
+
+            h2{
+                font-size: 1.4rem;
+            }
+        }
+
+
+}
+

@@ -1,73 +1,106 @@
 *{
-    margin:0px;
+    margin: 0px;
     padding:0px;
 }
+.price{
+    color:red;
+}
+.old_price{
+    text-decoration: line-through;
+}
 .focus{
+    width:100%;
     height: 150px;
-    width: 100%;
-    ion-slide{
 
-        height: 150px;
-        width: 100%;
-
-        img{
-
-            height: 150px;            
-            width: 100%;
-        }
-    }
-}
-
-
-.home_title{
-    font-size: 14px;
-    padding:5px 0px 5px 5px;
-
-
-}
-
-.home_title:before{
-
-    
-    display:inline-block;
-    border-left: 3px solid #f53d3d;
-    height: 14px;
-    width: 1px;
-    content: "";
-
-
-}
-
-//推荐商品
-.slide_product{
-       //滚动
-
-    ion-scroll{
-    
+    img{
         width:100%;
-        height: 120px;
-    
+        height: 150px;
     }
-    ul{
-        list-style: none; 
+}
 
-        padding: 0px 5px;
+.home_title {
+    padding: 5px 8px;
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0px 0px 0px;
+}
 
-        li{
-            width: 80px;
-            height: 120px;
-            float: left;
-            margin-right: 10px;
-            p{
-                padding:4px;
-                margin:0px;
-            }
+.home_title:before {
+    font-size: 8px;
+    border-left: 3px solid red;
+    margin-right: 4px;
+    position: relative;
+    top:-1px;
+    content: "";
+}
+
+.plist{
+    list-style: none;
+    padding:.4rem;
     
+    li{
+        width: 6.6rem;
+        height: 14.8rem;
+        float: left;
+        margin-right: .6rem;
+        .rec_shop_detial{
+            padding:.4rem 0rem;
+            margin:0px;
+            height: 3.2rem;
+            overflow: hidden;
         }
+        img{
+            width:6rem;
+            height: 6rem;
+            display: block;
+            margin:0 auto;
+        }
+        p{
+            padding:.2rem 0px;
+            text-align: center;
+        }
+        
     }
- 
-      
+}
+
+.rec_shop {
+    ion-scroll{
+        width: 100%;
+        height: 148px;
+        overflow-x: auto;
+    }
+    .plist{
+        width:auto;
+    }
+    .rec_shop_detial{
+        font-size: 1.2rem;
+    }
+}
+
+
+/*热门商品*/
+.hot_shop ion-col{
+    border-top:1px solid #eee; 
+    border-bottom:1px solid #eee; 
+    margin-bottom:-1px;
+}
+
+.hot_shop ion-col:nth-child(2n+1){
+    border-right:1px solid #eee; 
+   
+}
+.hot_shop .hot_shop_detail{
+    height: 3.2rem;
+    overflow: hidden;
+}
+
+.hot_shop img{
+    height:15rem;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
   
 }
-
-
+.hot_shop p{
+    padding:.5rem 0px;
+}

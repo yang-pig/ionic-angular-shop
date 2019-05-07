@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ProductlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+        <ion-searchbar></ion-searchbar>
+    
+        <ion-buttons end>
+          <button ion-button>
+             搜索
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>  
+            
+      <div class="list_content">
+    
+          <div class="sub_header">
+              <div>综合</div>
+              <div>销量</div>
+              <div>价格</div>          
+          </div>
+    
+           <ion-list inset>
+             <ion-item *ngFor="let item of list" >
+               <ion-thumbnail item-left>
+                  <img [src]="config.apiUrl+item.s_pic"  />            
+               </ion-thumbnail>
+               <h2> {{item.title}}</h2>
+               <p>价格:<span class="price">{{item.price}}</span>元</p>           
+             </ion-item>
+           </ion-list>
+
+           <ion-infinite-scroll (ionInfinite)="doLoadMore($event)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+         
+      </div>
+    
+</ion-content>

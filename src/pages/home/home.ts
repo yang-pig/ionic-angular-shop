@@ -19,6 +19,10 @@ export class HomePage {
   
   public recList=[];
 
+  public bestList=[];   /*精品推荐*/
+
+  public bestListWidth=''; /*精品推荐数据长度*/
+
   public hotList=[];  /*热门商品*/
 
   public recListWidth='';
@@ -32,6 +36,15 @@ export class HomePage {
     //调用轮播图
 
     this.getFocus();
+
+    //调用精品推荐
+    this.getBestProduct();
+
+    //调用猜你喜欢
+
+    this.getHotProduct();
+
+
 
     for(let i=0;i<10;i++){
 
@@ -58,4 +71,32 @@ export class HomePage {
 
 
   }
+   //精品推荐
+
+
+getBestProduct(){
+
+
+   this.httpService.requestData('api/plist?is_best=1',(data)=>{
+     console.log(data);
+       this.bestList=data.result;
+       this.bestListWidth=this.bestList.length*60+'px'; 
+   })
+}
+
+
+ //猜你喜欢
+
+ getHotProduct(){
+  
+
+  this.httpService.requestData('api/plist?is_hot=1',(data)=>{
+    // console.log(data);
+      this.hotList=data.result;            
+    
+  })
+
+}
+
+
 }

@@ -7,10 +7,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-searchbar></ion-searchbar>
+    <ion-searchbar [(ngModel)]="keywords"></ion-searchbar>
 
     <ion-buttons end>
-      <button ion-button (tap)="flag=!flag">
+      <button ion-button (tap)='getSearchList()'>
          搜索
       </button>
     </ion-buttons>
@@ -72,14 +72,20 @@
       </div>
 
        <ion-list inset>
-         <ion-item *ngFor="let item of list" >
-           <ion-thumbnail item-left>
-              <img src="{{item.pic}}"  />            
-           </ion-thumbnail>
-           <h2> {{item.title}}</h2>
-           <p>价格:123元</p>           
-         </ion-item>
+        <ion-item *ngFor="let item of list" >
+          <ion-thumbnail item-left>
+             <img [src]="config.apiUrl+item.s_pic"  />            
+          </ion-thumbnail>
+          <h2> {{item.title}}</h2>
+          <p>价格:<span class="price">{{item.price}}</span>元</p>           
+        </ion-item>
        </ion-list>
+
+       <ion-infinite-scroll (ionInfinite)="doLoadMore($event)" *ngIf="hasData">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+
   </div>
 
 </ion-content>

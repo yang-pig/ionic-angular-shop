@@ -20,6 +20,7 @@ import { RegistersignPage } from '../pages/registersign/registersign';
 import { RegisterpasswordPage } from '../pages/registerpassword/registerpassword';
 //搜索页面
 import { SearchPage } from '../pages/search/search';
+import { ProductlistPage } from '../pages/productlist/productlist';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -39,6 +40,7 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     LoginPage,
     RegisterPage,
     RegistersignPage,
+    ProductlistPage,
     RegisterpasswordPage,
     SearchPage
   ],
@@ -62,6 +64,7 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     TabsPage,
     LoginPage,
     RegisterPage,
+    ProductlistPage,
     RegistersignPage,
     RegisterpasswordPage,
     SearchPage
