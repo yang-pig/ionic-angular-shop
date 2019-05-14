@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { CategoryPage } from '../pages/category/category';
 import { CartPage } from '../pages/cart/cart';
 import { UserPage } from '../pages/user/user';
+import { PcontentPage } from '../pages/pcontent/pcontent';
 
 import { HttpModule,JsonpModule } from '@angular/http';
 
@@ -27,6 +28,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ConfigProvider } from '../providers/config/config';
 import { HttpServiceProvider } from '../providers/http-service/http-service';
+import { StorageProvider } from '../providers/storage/storage';
 
 
 @NgModule({
@@ -41,6 +43,7 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     RegisterPage,
     RegistersignPage,
     ProductlistPage,
+    PcontentPage,
     RegisterpasswordPage,
     SearchPage
   ],
@@ -65,6 +68,7 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     LoginPage,
     RegisterPage,
     ProductlistPage,
+    PcontentPage,
     RegistersignPage,
     RegisterpasswordPage,
     SearchPage
@@ -74,7 +78,8 @@ import { HttpServiceProvider } from '../providers/http-service/http-service';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConfigProvider,
-    HttpServiceProvider
+    HttpServiceProvider,
+    StorageProvider
   ]
 })
 export class AppModule {}

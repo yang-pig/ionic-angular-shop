@@ -1,0 +1,172 @@
+
+//商品详情
+
+.mb10 {
+    margin-bottom: 1rem;
+}
+
+.p_content{
+    background: #efefef;
+    .con_1{
+        .p_img{
+            width:100%;
+            height: 20rem;
+            img{
+                width:100%;
+                height: 20rem;                
+            }
+            
+
+        }
+        /*标题价格*/
+        .p_info{
+            background: #fff;
+            padding:1rem;
+        
+            .p_title{
+            
+
+                h2{
+                    font-size: 1.6rem;
+                    margin: 0px;
+
+                }
+                p{
+                    font-size: 1.4rem;
+
+                    color:#666;
+                }
+            }
+
+            .product_price{              
+                .old_price{
+                    color: #666;
+                    text-decoration:line-through;
+                }
+                .price{
+                    color: #f23030;
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        //属性
+
+
+        .p_attr{
+            /*颜色属性*/
+
+            padding:1rem;
+            background: #fff;
+            /*颜色属性*/ 
+            .color {
+                padding-bottom:.5rem;
+                 
+                span{  
+                    display: inline-block;
+                    padding:.5rem 1rem;
+                    margin-right:.5rem;
+                    border:1px solid #eee;
+                    border-radius: .5rem;
+                    margin-bottom: .5rem;                    
+    
+                }   
+                
+            }
+
+             /*数量*/
+             .number{
+                padding-bottom: .5rem;
+                .cart_number{                    
+                    width:100px;
+                    display: flex;
+                    float: right;
+                
+                    .input_left,.input_right{
+                            width: 38px;                   
+                            height: 28px;
+                            line-height: 28px;                                
+                            text-align:center;
+                            background: #f8f8f8;
+                            border:1px solid #f8f8f8;
+                    }
+                    .input_center{
+                            flex: 1;
+                            height: 28px;
+                            line-height: 28px;    
+                            input{
+                                border:1px solid #f8f8f8;
+                                height: 28px;
+                                line-height: 28px;    
+                                width: 100%;
+                                text-align: center;
+                            }
+                    }
+                    
+                }
+            }
+
+
+
+        }
+
+          /*运费颜色*/
+
+        .fee{
+            background: #fff;
+            padding: 1rem;
+        }
+
+    }
+}
+
+
+
+//底部的tab切换
+
+.footer_bar{
+    display: flex;
+
+    .carticon{
+        position: relative;
+        width:6.6rem;
+        text-align: center;
+
+        ion-icon{
+            color:#999;
+            font-size: 2.8rem;
+        }
+
+        p{
+            color:#999;
+            font-size: 1.4rem;
+
+        }
+        ion-badge{
+            position:absolute;
+            right:.5rem;
+            top:-0.2rem;
+        }
+    }    
+    .addcart{
+        flex:1;
+        height:4.4rem;
+        line-height: 4.4rem;
+        text-align: center;
+        color:#fff;
+        background: orange;
+        font-size: 1.6rem;
+      
+
+    }
+    .buy{
+        flex:1;
+        height:4.4rem;
+        line-height: 4.4rem;
+        text-align: center;
+          color:#fff;
+        background: red;
+        font-size: 1.6rem;
+     
+    }
+}

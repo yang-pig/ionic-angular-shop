@@ -37,8 +37,20 @@
               </p>
           
             </div>
-          
-            <div class="history">
+                    
+            <div class="history" *ngIf="historyList.length>0">
+              
+              <h3 class="search_title">历史搜索</h3>
+              <!-- 事件http://ionicframework.com/docs/components/#gestures -->
+              <ion-list inset >
+                <ion-item *ngFor="let item of historyList" (press)="removeHistory(item)" (tap)="goSearch(item)">
+                   {{item}}
+                </ion-item>
+             
+              </ion-list>
+           
+            </div>
+            <!-- <div class="history">
               
                  <h3 class="search_title">历史搜索</h3>
               
@@ -57,7 +69,7 @@
                     </ion-item>
                  </ion-list>
               
-            </div>
+            </div> -->
 
   </div>
   
