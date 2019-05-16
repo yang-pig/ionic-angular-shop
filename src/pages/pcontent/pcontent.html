@@ -31,34 +31,31 @@
         <div [ngSwitch]="tabs">
           <div class="con_1" *ngSwitchCase="'plist'">
               <div class="p_img">
-                <img src="assets/imgs/02.jpg" />              
+                  <img [src]="config.apiUrl+item.pic" />            
               </div>
               <div class="p_info mb10">
                   <div class="p_title">
-                      <h2>德国 进口牛奶 欧德堡（Oldenburger）超高温处理脱脂纯牛奶200ml*24盒</h2>
-                      <p>【真吃货 懒得等】品质牛奶京东11.11狂欢来袭，抢199减150神券，部分爆款低至2件8折，不等预售，直接开卖！(此商品不参加上述活动)</p>
+                      <h2>{{item.title}}</h2>
+                      <p>{{item.sub_title}}</p>
                   </div>
 
                   <div class="product_price mb10">
-                      <span class="now_price">特价：<span class="price">¥214</span></span> 　 　原价：<span class="old_price"> ¥21312</span>  
+                      <span class="now_price">特价：<span class="price">¥{{item.price}}</span></span> 　 　原价：<span class="old_price"> ¥{{item.old_price}}</span>  
                   </div>
               </div>
 
               <div class="p_attr mb10">
   
-                      <div class="color">
-                            <strong>颜色:</strong>                        
-                          
-                            <span>白色</span>
-                            <span>红色</span>
-                            <span>蓝色</span>
-                            <span>红色</span>
-                            <span>黄色</span>
-                            <span>白色</span>
-                          
-                          
-  
-                      </div>
+                     <div *ngIf="item.attr">
+
+                        <div class="color" *ngFor="let attr of item.attr">
+                            <strong>{{attr.cate}}:</strong> 
+                            <span *ngFor="let a of attr.list">
+                              {{a}}
+                            </span>
+                       </div>
+                       
+                     </div>
 
                       <div class="number">
                 
@@ -84,7 +81,11 @@
           </div>
         
           <div class="con_2" *ngSwitchCase="'pcontent'">
-              商品详情
+
+            <!-- 注意绑定html的方法 -->
+              <div [innerHTML]='item.content'>
+               
+              </div>
           </div>
           
         </div>

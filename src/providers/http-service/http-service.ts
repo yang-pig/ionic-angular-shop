@@ -1,6 +1,6 @@
 // import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {Http,Jsonp} from "@angular/http";
+import {Http,Jsonp,Headers} from "@angular/http";
 import { ConfigProvider } from '../config/config';
 
 /*
@@ -12,7 +12,10 @@ import { ConfigProvider } from '../config/config';
 @Injectable()
 export class HttpServiceProvider {
 
-  constructor(public jsonp:Jsonp,public config:ConfigProvider) {
+  //设置post的格式
+  private headers =new Headers({'Content-Type': 'application/json'});
+
+  constructor(public http: Http,public jsonp:Jsonp,public config:ConfigProvider) {
     console.log('Hello HttpServiceProvider Provider');
   }
 
@@ -34,5 +37,18 @@ export class HttpServiceProvider {
     })
 
   }
+
+    //post 提交数据
+
+    doPost(apiUrl,json,callback){
+      var api=this.config.apiUrl+apiUrl;
+  
+  
+      this.http.post(api,JSON.stringify(json),{headers:this.headers}).subscribe(function(res){
+  
+          callback(res.json());
+      })
+  
+    }
 
 }

@@ -1,6 +1,10 @@
 
 //商品详情
 
+ul{
+    list-style-type: none;
+}
+
 .mb10 {
     margin-bottom: 1rem;
 }
@@ -117,6 +121,16 @@
             padding: 1rem;
         }
 
+    }
+    .con_2{
+        padding:1rem;
+
+        background: #fff;
+
+        img{
+            max-width: 90%;
+            margin: 0 auto;
+        }
     }
 }
 
